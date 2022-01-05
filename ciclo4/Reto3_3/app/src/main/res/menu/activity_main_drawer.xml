@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_productos"
+            android:icon="@drawable/ic_baseline_pedal_bike_24"
+            android:title="@string/menu_productos" />
+        <item
+            android:id="@+id/nav_servicios"
+            android:icon="@drawable/ic_baseline_build_24"
+            android:title="@string/menu_servicios" />
+        <item
+            android:id="@+id/nav_sucursales"
+            android:icon="@drawable/ic_baseline_store_24"
+            android:title="@string/menu_sucursales" />
+    </group>
+</menu>
