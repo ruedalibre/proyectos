@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Bienvenido</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Ruedalibre SAS</string>
+    <string name="nav_header_subtitle">info@ruedalibre.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="action_add">Agregar</string>
+    <string name="action_show">Show All</string>
+
+    <string name="menu_home">Inicio</string>
+    <string name="menu_productos">PRODUCTOS</string>
+    <string name="menu_servicios">SERVICIOS</string>
+    <string name="menu_sucursales">SUCURSALES</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_activity_maps_show">MapsActivityShow</string>
+
+    <!-- Productos -->
+    <string name="nameP1">Alta gama</string>
+    <string name="descriptionP1">marco en titanio</string>
+    <string name="priceP1">$500.000</string>
+
+    <!-- Servicios -->
+    <string name="nameS1">Mantenimiento</string>
+    <string name="descriptionS1">Completo</string>
+    <string name="priceS1">$100.000</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_form_maps">FormMapsActivity</string>
+    <string name="title_activity_show_maps">ShowMapsActivity</string>
+
+</resources>
