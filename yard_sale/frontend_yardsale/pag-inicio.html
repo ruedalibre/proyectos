@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet"> 
+    <title>Document</title>
+    <style>
+        /* En el root van todos los parámetros
+        más generales del diseño */
+        :root {
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD982;
+            /* Aquí establezco variables creando tamaños estándar 
+            para los textos pequeños, medianos y grandes */
+            --sm: 14px; 
+            --md: 15px;
+            --lg: 18px;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 240px);
+            /* Lo que hace esto es que establece un acho fijo
+            de columna y los elementos se irán acomodando
+            automáticamente al tamaño de la pantalla */
+            gap: 26px; /* Esto agrega espacio entre las cards */ 
+            place-content: center;
+        }
+        .product-card {
+            width: 240px; 
+            /* Es necesario adaptar el tamaño de
+            la carta también a la modulación del contenedor
+            para que los elementos queden inscritos en 
+            el mismo */
+
+        }
+        .product-card img {
+            width: 240px;
+            height: 240px;
+            border-radius: 20px;
+            /* Aquí también se debe ajustar el tamaño de 
+            la imagen para que quede inscrita en la card */
+            object-fit: cover; 
+            /* De esta manera la imagen conserva sus 
+            proporciones originales, sin distorsionarse */
+        }
+        .product-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 12px;
+        }
+        .product-info figure {
+            margin: 0;
+            /* Los elementos de imagen traen un 
+            margen por defecto, se lo puedo quitar
+            para que la imagen se ajuste al tamaño 
+            de su caja */
+        }
+        .product-info figure img {
+            width: 35px;
+            height: 35px;
+            /* Es necesario especificar tamaño de 
+            los elementos que están debajo de las fotos
+            porque, por defecto, quedan iguales */
+        }
+        .product-info div p:nth-child(1){
+            /* En esta parte se aplican los estilos 
+            a la información de la card*/
+            font-weight: bold;
+            font-size: var(--md);
+            margin-top: 0;
+            margin-bottom: 4px;
+        }
+        .product-info div p:nth-child(2){
+            /* En esta parte se aplican los estilos 
+            a la información de la card*/
+            font-size: var(--sm);
+            margin-top: 0px;
+            margin-bottom: 0px;
+            color: var(--very-light-pink);
+        }
+        
+        @media screen and (max-width: 640px) {
+            .cards-container {            
+                grid-template-columns: repeat 
+                (auto-fill, 140px);
+            }
+            .product-card {
+                width: 140px;             
+            }
+            .product-card img {
+                width: 140px;
+                height: 140px;
+            }
+        }
+    </style>
+</head>
+    <body>
+        <section class="main-container">
+            <div class="cards-container">
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/1545333/pexels-photo-1545333.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
+                    <div class="product-info">
+                        <div>
+                            <p>$120,00</p>
+                            <p>Electric guitar</p>
+                        </div>
+                        <figure>
+                            <img src="./icons/bt_add_to_cart.svg" alt="">
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/1545333/pexels-photo-1545333.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
+                    <div class="product-info">
+                        <div>
+                            <p>$120,00</p>
+                            <p>Electric guitar</p>
+                        </div>
+                        <figure>
+                            <img src="./icons/bt_add_to_cart.svg" alt="">
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/1545333/pexels-photo-1545333.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
+                    <div class="product-info">
+                        <div>
+                            <p>$120,00</p>
+                            <p>Electric guitar</p>
+                        </div>
+                        <figure>
+                            <img src="./icons/bt_add_to_cart.svg" alt="">
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/1545333/pexels-photo-1545333.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
+                    <div class="product-info">
+                        <div>
+                            <p>$120,00</p>
+                            <p>Electric guitar</p>
+                        </div>
+                        <figure>
+                            <img src="./icons/bt_add_to_cart.svg" alt="">
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/1545333/pexels-photo-1545333.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
+                    <div class="product-info">
+                        <div>
+                            <p>$120,00</p>
+                            <p>Electric guitar</p>
+                        </div>
+                        <figure>
+                            <img src="./icons/bt_add_to_cart.svg" alt="">
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/1545333/pexels-photo-1545333.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
+                    <div class="product-info">
+                        <div>
+                            <p>$120,00</p>
+                            <p>Electric guitar</p>
+                        </div>
+                        <figure>
+                            <img src="./icons/bt_add_to_cart.svg" alt="">
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/1545333/pexels-photo-1545333.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
+                    <div class="product-info">
+                        <div>
+                            <p>$120,00</p>
+                            <p>Electric guitar</p>
+                        </div>
+                        <figure>
+                            <img src="./icons/bt_add_to_cart.svg" alt="">
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/1545333/pexels-photo-1545333.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
+                    <div class="product-info">
+                        <div>
+                            <p>$120,00</p>
+                            <p>Electric guitar</p>
+                        </div>
+                        <figure>
+                            <img src="./icons/bt_add_to_cart.svg" alt="">
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/1545333/pexels-photo-1545333.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
+                    <div class="product-info">
+                        <div>
+                            <p>$120,00</p>
+                            <p>Electric guitar</p>
+                        </div>
+                        <figure>
+                            <img src="./icons/bt_add_to_cart.svg" alt="">
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/1545333/pexels-photo-1545333.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
+                    <div class="product-info">
+                        <div>
+                            <p>$120,00</p>
+                            <p>Electric guitar</p>
+                        </div>
+                        <figure>
+                            <img src="./icons/bt_add_to_cart.svg" alt="">
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/1545333/pexels-photo-1545333.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
+                    <div class="product-info">
+                        <div>
+                            <p>$120,00</p>
+                            <p>Electric guitar</p>
+                        </div>
+                        <figure>
+                            <img src="./icons/bt_add_to_cart.svg" alt="">
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/1545333/pexels-photo-1545333.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
+                    <div class="product-info">
+                        <div>
+                            <p>$120,00</p>
+                            <p>Electric guitar</p>
+                        </div>
+                        <figure>
+                            <img src="./icons/bt_add_to_cart.svg" alt="">
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/1545333/pexels-photo-1545333.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
+                    <div class="product-info">
+                        <div>
+                            <p>$120,00</p>
+                            <p>Electric guitar</p>
+                        </div>
+                        <figure>
+                            <img src="./icons/bt_add_to_cart.svg" alt="">
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/1545333/pexels-photo-1545333.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
+                    <div class="product-info">
+                        <div>
+                            <p>$120,00</p>
+                            <p>Electric guitar</p>
+                        </div>
+                        <figure>
+                            <img src="./icons/bt_add_to_cart.svg" alt="">
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/1545333/pexels-photo-1545333.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
+                    <div class="product-info">
+                        <div>
+                            <p>$120,00</p>
+                            <p>Electric guitar</p>
+                        </div>
+                        <figure>
+                            <img src="./icons/bt_add_to_cart.svg" alt="">
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.pexels.com/photos/1545333/pexels-photo-1545333.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
+                    <div class="product-info">
+                        <div>
+                            <p>$120,00</p>
+                            <p>Electric guitar</p>
+                        </div>
+                        <figure>
+                            <img src="./icons/bt_add_to_cart.svg" alt="">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </body>
+    </head

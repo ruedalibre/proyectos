@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet"> 
+    <title>Document</title>
+    <style>
+         :root {
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD982;
+            /* Aquí establezco variables creando tamaños estándar 
+            para los textos pequeños, medianos y grandes */
+            --sm: 14px; 
+            --md: 15px;
+            --lg: 18px;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .product-detail {
+            width: 360px;
+            padding-bottom: 24px;
+            position: absolute;
+            right: 0;
+            /* De esta forma el elemento
+            queda alineado totalmente 
+            a la derecha */
+        }
+
+        .product-detail-close {
+            background: var(--white);
+            width: 14px;
+            height: 14px;
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            /* De esta manera se separa la X
+            de la esquina de la imagen */
+            z-index: 2;
+            padding: 12px;
+            /* Aquí se ubica la X de "cerrar"
+            en el extremo superior izquierdo
+            de la imagen */
+            border-radius: 50%;
+        }
+
+        .product-detail-close:hover{
+            cursor: pointer;
+            /* Esto convierte el cursor a una manito
+            que indica que esa imagen es cliqueable */
+        }
+
+        .product-detail > img:nth-child(2){
+            /* Aquí se agregan los estilos a la
+            imagen para que se ajuste al tamaño
+            del diseño */
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+            /* Se utiliza para que la imagen no se
+            distorsione */
+            border-radius: 0 0 20px 20px;
+        }
+        
+        .product-info {
+            margin: 24px 24px 0 24px;
+        }
+
+        .product-info p:nth-child(1){
+            font-weight: bold;
+            font-size: var(--md);
+            margin-top: 0;
+            margin-bottom: 4px;
+        }
+
+        .product-info p:nth-child(2){
+            color: var(--very-light-pink);
+            font-size: var(--md);
+            margin-top: 0;
+            margin-bottom: 36px;
+        }
+
+        .product-info p:nth-child(3){
+            color: var(--very-light-pink);
+            font-size: var(--md);
+            margin-top: 0;
+            margin-bottom: 36px;
+        }
+
+        .primary-button {
+            background-color: var(--hospital-green);
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+        }
+        .add-to-cart-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @media screen and (max-width: 640px) {
+            .product-detail {
+                width: 100%;
+                /* En este caso el elemento 
+                crecerá a 640px cuando la pantalla
+                alcance ese tamaño, de lo contrario 
+                quedará de 360px */
+            }  
+        }
+
+
+    </style>
+</head>
+<body>
+    <aside class="product-detail">
+        <div class="product-detail-close">
+            <img src="./icons/icon_close.png" alt="close">
+        </div>
+        <img src="https://images.pexels.com/photos/7901954/pexels-photo-7901954.jpeg?cs=srgb&dl=pexels-ivan-samkov-7901954.jpg&fm=jpg" 
+        alt="guitar-player">
+        <div class="product-info">
+            <p>$350,000</p>
+            <p>Electroacoustic</p>
+            <p>This guitar will provide the 
+                best experience to players 
+                who are enthusiastic about 
+                the mixture of electronic 
+                and acoustic sound. 
+                An all time best sell!
+            </p>
+                <button class="primary-button add-to-cart-button">
+                    <img src="./icons/bt_add_to_cart.svg" 
+                    alt="add-to-cart">Add to cart
+                </button> 
+        </div>
+    </aside>
+    
+</body>
+</html>
