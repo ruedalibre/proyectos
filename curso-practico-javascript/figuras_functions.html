@@ -104,6 +104,16 @@
             margin-bottom: 30px;
             margin-top: 10px;
         }
+
+        @media screen and (max-width: 640px) {
+            .main-container {            
+                grid-template-columns: repeat 
+                (auto-fill, 300px);
+            }
+            .card-cuadrado, .card-triangulo, .card-circulo {
+                width: 300px;             
+            }
+        }
         
     </style>
 </head>
