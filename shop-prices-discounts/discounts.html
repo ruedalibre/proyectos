@@ -8,99 +8,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Roboto:wght@500&display=swap" rel="stylesheet"> 
     <title>SHOP | Discounts & Cupons</title>
-    <style>
-
-        body, h2 {
-            font-family: 'Roboto', sans-serif;
-        }
-
-        h1 {
-            font-family: 'Courgette', cursive;
-        }
-
-        /* Dropdown Button */
-        .dropbtn {
-        background-color: #04AA6D;
-        color: white;
-        padding: 16px;
-        font-size: 16px;
-        border: none;
-        }
-
-        /* The container <div> - needed to position the dropdown content */
-        .dropdown {
-        position: relative;
-        display: inline-block;
-        }
-
-        /* Dropdown Content (Hidden by Default) */
-        .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f1f1f1;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-        }
-
-        /* Links inside the dropdown */
-        .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        }
-
-        /* Change color of dropdown links on hover */
-        .dropdown-content a:hover {background-color: #ddd;}
-
-        /* Show the dropdown menu on hover */
-        .dropdown:hover .dropdown-content {display: block;}
-
-        /* Change the background color of the dropdown button when the dropdown content is shown */
-        .dropdown:hover .dropbtn {background-color: #3e8e41;} 
-    </style>
+    <link rel="stylesheet" href="discounts.css">
 </head>
 <body>
-    <header>
-        <h1>Special discounts for you!</h1>
-        <h2>Limited time OFFER</h2>
-        <h2>Use this calculator to find out the price you 
-            will pay for each product with today's sale!
-        </h2>
-    </header>
-    <section>
-        <form action="">
-            <label for="InputPrice">
-                Enter the price of the product: 
-            </label>
-            <input type="number" id="InputPrice">
-            <!-- El input debe ser tipo número porque voy a 
-            trabajar con precios y descuentos -->
-            <!-- El label y el input deben llevar el mismo nombre
-            del id para que queden vinculados -->
-            <label for="InputDiscount">
-                Check our different categories, 
-                take note of the discounts below 
-                the products you want and type them here: 
-            </label>
-            <input type="number" id="InputDiscount">
-            <button type="button" onclick="onClickPriceDiscount()">
-                <!-- El botón lleva conecetada siempre una acción 
-                que va a ejecutar al momento de ser presionado  -->
-                Price you pay
-            </button>
-            <!-- PARA MOSTRAR EL RESULTADO COMO PARTE DEL 
-            HTML, RESERVO UN ESPACIO DENTRO DE UN PÁRRAFO
-            Y PUEDO CONCATENAR UN STRING CON EL RESULTADO DE
-            LA OPERACIÓN MATEMÁTICA, LLAMANDO A LA FUNCIÓN. 
-            Para hacer esto le asigno un id al párrafo y lo 
-            llamo desde el archivo js.  -->
-            <p id="ResultP"></p>
-
+    <div class="main-container">
+        <header class="contenedor-titulos">
+            <h1>This special discounts are for you!</h1>
+            <h2>Calculate the price you will pay 
+                for each product with today's sale!
+            </h2>
+        </header>
+        <div>
             <label for="">
-                Got a coupon? Lucky you! 
-                Select yours in the list
+                1. Got a coupon? Select yours in the list
                 and apply extra discount to your purchase!
             </label>
             <div class="dropdown">
@@ -108,11 +28,47 @@
                 <div class="dropdown-content">
                   <a href="#">Gold coupon</a>
                   <a href="#">Siver coupon</a>
-                  <a href="#">Bronze coupon 3</a>
+                  <a href="#">Bronze coupon</a>
                 </div>
-              </div> 
-        </form>
-    </section>
+            </div> 
+        </div>
+        <div class="contenedor-form">
+            <form action="">
+                <div class="input-field">
+                    <label for="InputPrice">
+                        2. Enter the price of the product: 
+                    </label>
+                    <input type="number" id="InputPrice">
+                    <!-- El input debe ser tipo número porque voy a 
+                    trabajar con precios y descuentos -->
+                    <!-- El label y el input deben llevar el mismo nombre
+                    del id para que queden vinculados -->
+                </div>
+                <div class="input-field">
+                    <label for="InputDiscount">
+                        3. Check our different categories, 
+                        take note of the discounts below 
+                        the products and type them here: 
+                    </label>
+                    <input type="number" id="InputDiscount">
+                </div>             
+                <button type="button" onclick="onClickPriceDiscount()">
+                    <!-- El botón lleva conecetada siempre una acción 
+                    que va a ejecutar al momento de ser presionado  -->
+                    Price you pay
+                </button>
+                <!-- PARA MOSTRAR EL RESULTADO COMO PARTE DEL 
+                HTML, RESERVO UN ESPACIO DENTRO DE UN PÁRRAFO
+                Y PUEDO CONCATENAR UN STRING CON EL RESULTADO DE
+                LA OPERACIÓN MATEMÁTICA, LLAMANDO A LA FUNCIÓN. 
+                Para hacer esto le asigno un id al párrafo y lo 
+                llamo desde el archivo js.  -->
+                <div>
+                    <p id="ResultP"></p>
+                </div>
+            </form>
+        </div>
+    </div>
     
     <script src="discounts.js"></script>
     
