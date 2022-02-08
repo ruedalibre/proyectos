@@ -18,9 +18,9 @@ function calcPrecioConDcto (precio, dcto) {
 }
 
 function onClickPriceDiscount () {
+    /* De esta manera accedo al input con el id indicado... */
     const inputPrice = document.getElementById("InputPrice");
-    /* De esta manera accedo al elemento, pero necesito, además,
-    acceder a su valor */
+     /* ...pero necesito además acceder a su valor */ 
     const priceValue = inputPrice.value;
 
     const inputDiscount = document.getElementById("InputDiscount");
@@ -36,8 +36,8 @@ function onClickPriceDiscount () {
     RESULTADO CON UNA VARIABLE QUE GUARDA EL RESULTOADO DE LA
     OPERACIÓN MATEMÁTICA QUE CALCULA EL DESCUENTO */
     const resultP = document.getElementById("ResultP");
-    /* El mensaje para el usuario + el resultado se muestra 
-    gracias al método innerText */
+    /* El mensaje para el usuario (+ el resultado de la operación) 
+    se muestra gracias al método innerText */
     resultP.innerText = "Price of the product after discount: $" + precioConDcto;
 
 }
