@@ -24,6 +24,7 @@ label {
     border: 3px solid var(--sea-green);
     border-radius: 20px;
     padding: 20px 40px;
+    gap: 10px;
 
 }
 .contenedor-titulos {
@@ -31,33 +32,22 @@ label {
     padding: 10px;
 }
 
-.seccion-cupon {
-    display: grid;
-    text-align: left;
-}
 .contenedor-form {
-    display: grid;
-    padding: 0px 20px;
-}
-
-.input-field {
     display: flex;
-    flex-wrap: wrap;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    text-align: left;
-
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-.input-field input{
-    display: grid;
-    max-width: 40%;
-        
+.contenedor-form .input-field{
+   padding-bottom: 20px;
 }
-
-label {
-    margin: 10px;
-}
+#InputDiscount, 
+#InputPrice,
+#InputCoupon  {
+    width: 40%;
+    margin-top: 5px;
+} 
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -74,8 +64,15 @@ h2 {
 }
 
 button {
+    width: 70%;
+    color: white;
+    background: var(--shamrock-green);
     padding: 10px;
     border: none;
     border-radius: 10px;
     margin: 20px;
+}
+
+#Result {
+    color: darkred
 }
