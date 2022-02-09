@@ -46,9 +46,39 @@ body {
     padding: 20px;
     border-radius: 4px;
 }
+/* 
+--------------------------------------------
+        ESTABLECER TAMAÑOS DE SECCIONES
+--------------------------------------------
+*/
+.contenedor .header {
+    background: #12203e;
+    color: #fff;
+    /* Las líneas guía de la maquetación (ver inspector) 
+    están numeradas, entonces yo puedo decirle desde cuál 
+    línea hasta cual quiero que abarque mi elemento header,
+    footer, etc.  */
+    grid-column-start: 1;
+    grid-column-end: 4;
+    /* Otra manera de abarcar todo el ancho del contenedor 
+    principal, es poner grid-column-end: -1; */
+}
 
+.contenedor .contenido {
+    /* El argumento SPAN indica cuantas columnas
+    del grid se va a tomar el elemento, en este caso, 
+    la sección de contenido va a abarcar 2 de las 3 columnas
+    disponibles  */
+    grid-column: span 2;    
+}
 
-
+.contenedor .sidebar {
+    grid-column:  3 / 4;
+    background: #faa43d;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
 
 
 
