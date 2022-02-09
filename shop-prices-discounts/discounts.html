@@ -22,8 +22,9 @@
             <form action="">
                 <div class="input-field">
                     <label for="InputPrice">
-                        1. Enter the price of the product: 
+                        1. Price of the product ($): 
                     </label>
+                    <br>
                     <input type="number" id="InputPrice">
                     <!-- El input debe ser tipo número porque voy a 
                     trabajar con precios y descuentos -->
@@ -32,15 +33,18 @@
                 </div>
                 <div class="input-field">
                     <label for="InputDiscount">
-                        2. Enter the discount of the product: 
+                        2. Discount (%): 
                     </label>
+                    <br>
                     <input type="number" id="InputDiscount">
                 </div>   
                 <div class="input-field">
                     <label for="InputDiscount">
-                        3. Enter your coupon (golden, silver or bronze): 
+                        3. Coupon: 
                     </label>
+                    <br>
                     <input type="text" id="InputCoupon">
+                    <p>(golden, silver or bronze)</p>
                 </div>          
                 <button type="button" onclick="onClickPriceDiscount()">
                     <!-- El botón lleva conecetada siempre una acción 
