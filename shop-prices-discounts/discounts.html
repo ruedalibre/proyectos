@@ -6,37 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Roboto:wght@500&display=swap" rel="stylesheet"> 
-    <title>SHOP | Discounts & Cupons</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Source+Sans+Pro:wght@300&family=Special+Elite&display=swap" rel="stylesheet">    <title>SHOP | Discounts & Cupons</title>
     <link rel="stylesheet" href="discounts.css">
 </head>
 <body>
     <div class="main-container">
         <header class="contenedor-titulos">
-            <h1>This special discounts are for you!</h1>
+            <h1>THIS SPECIAL DISCOUNTS ARE FOR YOU!</h1>
             <h2>Calculate the price you will pay 
                 for each product with today's sale!
             </h2>
         </header>
-        <div>
-            <label for="">
-                1. Got a coupon? Select yours in the list
-                and apply extra discount to your purchase!
-            </label>
-            <div class="dropdown">
-                <button class="dropbtn">Choose your coupon</button>
-                <div class="dropdown-content">
-                  <a href="#">Gold coupon</a>
-                  <a href="#">Siver coupon</a>
-                  <a href="#">Bronze coupon</a>
-                </div>
-            </div> 
-        </div>
+       
         <div class="contenedor-form">
             <form action="">
                 <div class="input-field">
                     <label for="InputPrice">
-                        2. Enter the price of the product: 
+                        1. Enter the price of the product: 
                     </label>
                     <input type="number" id="InputPrice">
                     <!-- El input debe ser tipo número porque voy a 
@@ -46,16 +32,20 @@
                 </div>
                 <div class="input-field">
                     <label for="InputDiscount">
-                        3. Check our different categories, 
-                        take note of the discounts below 
-                        the products and type them here: 
+                        2. Enter the discount of the product: 
                     </label>
                     <input type="number" id="InputDiscount">
-                </div>             
+                </div>   
+                <div class="input-field">
+                    <label for="InputDiscount">
+                        3. Enter your coupon (golden, silver or bronze): 
+                    </label>
+                    <input type="text" id="InputCoupon">
+                </div>          
                 <button type="button" onclick="onClickPriceDiscount()">
                     <!-- El botón lleva conecetada siempre una acción 
                     que va a ejecutar al momento de ser presionado  -->
-                    Price you pay
+                    PRICE YOU PAY
                 </button>
                 <!-- PARA MOSTRAR EL RESULTADO COMO PARTE DEL 
                 HTML, RESERVO UN ESPACIO DENTRO DE UN PÁRRAFO
@@ -64,7 +54,7 @@
                 Para hacer esto le asigno un id al párrafo y lo 
                 llamo desde el archivo js.  -->
                 <div>
-                    <p id="ResultP"></p>
+                    <p id="Result"></p>
                 </div>
             </form>
         </div>
