@@ -1,0 +1,56 @@
+/* Esta configuración de margin y padding 
+inicial quita los valores por defecto que 
+traen los elementos; así es más fácil 
+establecer estas medidas de manera manual 
+para tener más control el diseño */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: lightgrey;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.contenedor {
+    /* para que el contenedor no quede totalmente pegado 
+    a los bordes de la ventada */
+    width: 90%;
+    max-width: 1000px;
+    /* Para centrar la página */
+    margin: 20px auto;
+    display: grid;
+    /* Este es el espacio que van a tener todos los objetos
+    entre sí, de manera que no tengo que estar moviendo 
+    los márgenes de los elementos. El gap no se aplica a los 
+    bordes externos del contenedor */
+    gap: 20px;
+    /* Se establece el número de columnas que va a llegar 
+    el diseño. Es importante tener previamente la diagramación */
+    grid-template-columns: repeat(3, 1fr);
+    /* Establezco el número de filas y su tamaño. 
+    Al principio no se nota el cambio, pero el grid separa 
+    los espacio para luego llenarlos con los elementos  */
+    grid-template-rows: repeat(4, auto);
+}
+
+/* En este caso, los div corresponden a los dos widgets */
+.contenedor > div, 
+.contenedor .header, 
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .footer {
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+
+
+
+
+
+
+
