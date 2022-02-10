@@ -34,6 +34,18 @@ body {
     Al principio no se nota el cambio, pero el grid separa 
     los espacio para luego llenarlos con los elementos  */
     grid-template-rows: repeat(4, auto);
+
+    /*  -------------------------------------------
+        MÉTODO #2: HACER LA MAQUETACIÓN POR ÁREAS
+        -------------------------------------------
+    */
+    /* Después de establecer la cantidad de columans y filas
+    con grid-template-(columns/rows), realizo la distribución 
+    de los espacios de la siguiente manera: */
+    grid-template-areas: "header header header"
+                         "contenido contenido sidebar"
+                         "widget-1 widget-2 sidebar"
+                         "footer footer footer"
 }
 
 /* En este caso, los div corresponden a los dos widgets */
@@ -58,10 +70,17 @@ body {
     están numeradas, entonces yo puedo decirle desde cuál 
     línea hasta cual quiero que abarque mi elemento header,
     footer, etc.  */
-    grid-column-start: 1;
-    grid-column-end: 4;
+    /* grid-column-start: 1;
+    grid-column-end: 4; */
     /* Otra manera de abarcar todo el ancho del contenedor 
     principal, es poner grid-column-end: -1; */
+
+    /*  -------------------------------------------
+        MÉTODO #2: HACER LA MAQUETACIÓN POR ÁREAS
+        -------------------------------------------
+    */
+    grid-area: header;
+
 }
 
 .contenedor .contenido {
@@ -69,18 +88,126 @@ body {
     del grid se va a tomar el elemento, en este caso, 
     la sección de contenido va a abarcar 2 de las 3 columnas
     disponibles  */
-    grid-column: span 2;    
+    /* grid-column: span 2;     */
+
+    /*  -------------------------------------------
+        MÉTODO #2: HACER LA MAQUETACIÓN POR ÁREAS
+        -------------------------------------------
+    */
+    grid-area: contenido;
 }
 
 .contenedor .sidebar {
+    /* Para organizar los elementos al interior de 
+    un contenedor, lo ideal es usar FLEX, sin embargo
+    la ubicación del contenedor en la estructura, es 
+    manejada por GRID */
     grid-column:  3 / 4;
-    background: #faa43d;
-    text-align: center;
+    /* grid-row: span 2; */
+    /* Aquí también podría haberle dicho
+    grid-row: 2 / 4; para que abarcara dos filas
+    de la estructura, pero corre el riesgo de que 
+    los elementos cambien de orden en la vista móvil*/
+    
     display: flex;
+    
+    background: #faa43d;
+    /* Para que el texto quede centrado en sentido 
+    vertical y horizontal */
+    text-align: center;
+    justify-content: center;
     align-items: center;
+
+    /* Es importante darle un tamaño mínimo al sidebar
+    para el momento en que la web sea abierta en un 
+    móvil, porque va a pasar de un formao vertical a uno
+    horizontal */
+    min-height: 200px;
+    
+    /*  -------------------------------------------
+        MÉTODO #2: HACER LA MAQUETACIÓN POR ÁREAS
+        -------------------------------------------
+    */
+    grid-area: sidebar;
+
+}
+
+.contenedor .widget-1,
+.contenedor .widget-2 {
+    display: flex;
+    background: #55a8fd;
+    color: #fff;
+    height: 100px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor .widget-1 {
+    /*  -------------------------------------------
+        MÉTODO #2: HACER LA MAQUETACIÓN POR ÁREAS
+        -------------------------------------------
+    */
+    grid-area: widget-1;
+}
+
+.contenedor .widget-2 {
+    /*  -------------------------------------------
+        MÉTODO #2: HACER LA MAQUETACIÓN POR ÁREAS
+        -------------------------------------------
+    */
+    grid-area: widget-2;
 }
 
 
 
+.contenedor .footer {
+    background: #12203e;
+    color: #fff;
+    /* grid-column: span 3; */
 
+    /*  -------------------------------------------
+        MÉTODO #2: HACER LA MAQUETACIÓN POR ÁREAS
+        -------------------------------------------
+    */
+    grid-area: footer;
 
+}
+
+@media screen and (max-width: 768px) {
+    /* Puedo usar estas líneas para 
+    testear inicialmente si el navegador
+    está cargando el media */
+    /* body {
+        background: #000;  
+    } */
+
+    /* Ahora quiero que el contenido de la 
+    caja del texto principal abarque la totalidad
+    de la pantalla cuando la web sea abierta en 
+    un móvil */
+    /* .contenedor .contenido {
+        grid-column: 1 / -1;
+    }
+    .contenedor .sidebar {
+        grid-column: 1 / -1;
+    }
+
+    .contenedor .widget-1 {
+        grid-column: span 2;
+    } */
+
+    /*  -------------------------------------------
+        MÉTODO #2: HACER LA MAQUETACIÓN POR ÁREAS
+        -------------------------------------------
+    */
+    /* Copio el grid-template-areas de arriba y adapto
+    la distribución que desee para la pantalla del móvil  */
+    .contenedor {
+        grid-template-areas: "header header header"
+                             "contenido contenido contenido"
+                             "sidebar sidebar sidebar"
+                             "widget-1 widget-2 widget-2"
+                             "footer footer footer";
+    }
+}
