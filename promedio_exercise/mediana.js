@@ -15,6 +15,7 @@ function calcularMediaAritmetica(lista) {
 /* Primero uso el método .sort para organizar 
  en orden ascendente los números ingresados 
  por el usuario*/
+
  function ordenarNumeros(lista) {
     var numerosOrdenados = lista.sort(function(a,b) {
         return a - b; 
@@ -30,20 +31,23 @@ function esPar(numeros) {
     };
 }
 
-function calcualarMediana(listaNumeros) {
-    const listaEnOrden = ordenarNumeros(listaNumeros);
+function calcularMediana(listaNumeros) {
+    // var listaEnOrden = ordenarNumeros(listaNumeros);
+    var numerosOrdenados = listaNumeros.sort(function(a,b) {
+        return a - b; 
+    });
     
-    const mitadLista1 = parseInt(listaEnOrden.length / 2);
+    const mitadLista1 = parseInt(numerosOrdenados.length / 2);
     
     let mediana; 
-        if (esPar(listaEnOrden.length)) {
-            const elemento1 = listaEnOrden[mitadLista1 -1];
-            const elemento2 = listaEnOrden[mitadLista1];
+        if (esPar(numerosOrdenados.length)) {
+            const elemento1 = numerosOrdenados[mitadLista1 -1];
+            const elemento2 = numerosOrdenados[mitadLista1];
             const promedioElemento1y2 = calcularMediaAritmetica([elemento1, elemento2]);
 
             mediana = promedioElemento1y2;
         } else {
-            mediana = listaEnOrden[mitadLista1];
+            mediana = numerosOrdenados[mitadLista1];
         }
         return mediana;
 }
