@@ -15,13 +15,6 @@ function calcularMediaAritmetica(lista) {
 /* Primero uso el método .sort para organizar 
  en orden ascendente los números ingresados 
  por el usuario*/
-
- function ordenarNumeros(lista) {
-    var numerosOrdenados = lista.sort(function(a,b) {
-        return a - b; 
-    });
-    console.log(numerosOrdenados);
- }
     
 function esPar(numeros) {
     if (numeros % 2 === 0) {
